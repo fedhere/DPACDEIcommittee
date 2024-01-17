@@ -11,6 +11,80 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+        .wrap-collabsible {
+  margin-bottom: 1.2rem 0;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle {
+  display: block;
+
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 1rem;
+
+  color: #ffffff;
+  background: #ffffff;
+
+  cursor: pointer;
+
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: #7C5A0B;
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+  max-height: 0px;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 100vh;
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {
+  background: rgba(224, 224, 224, .2);
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+}
+
+        </style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -52,7 +126,38 @@
 						<div class="inner">
 							<header>
 								<h2>This is the web portal of the Climate, DIversity, Equit, and Inclusion Committee of the UD Department of Physics and Astronomy<br /></h2>
-								<p>This page was designed to collect and distribute resources with all members of DPA about any issues of Climate, Diversity, Equity, and Inclusion in our community.</p>
+								
+                                <p>This page was designed to collect and distribute resources with all members of DPA about any issues of Climate, Diversity, Equity, and Inclusion in our community.</p>
+                                
+                                <div class="wrap-collabsible">
+                                  <input id="collapsible" class="toggle" type="checkbox" checked>
+                                  <label for="collapsible" class="lbl-toggle">  CDEIC Statament Of Values
+                                </label>
+                                  <div class="collapsible-content">
+                                    <div class="content-inner">
+                                      <p>
+
+
+                                                                    The University of Delaware’s Department of Physics and Astronomy’s (DPA) Climate Diversity Equity and Inclusion Committee (CDEIC) is wholly committed to creating a safe, diverse, and inclusive environment that celebrates and supports each of the DPA’s members and we strive towards making diversity and inclusivity a top priority within our department. We stand against harassment, discrimination, marginalization or maltreatment on the basis of personal attributes, including but not limited to race, color, sex, gender expression, sexual orientation, religious beliefs, nationality and national origin, physical appearance, physical abilities, parental and caregiver status, political affiliation or opinions, and language.
+
+                                        </p><p>
+                                                                    We recognize and condemn academia’s long history of upholding the white supremacist and other power structures which suppress the voices of marginalized peoples. The CDEIC holds that all members of the DPA share the responsibility of creating a climate where we are mindful of and we act against pervasive discrimination, stereotyping, bias, and hatred. We acknowledge the effects of these biases on our individual mindsets and endeavor to practice empathy and true fairness of mind when we relate with one another. An inclusive environment protects the physical, mental, and emotional wellbeing of all DPA members and it enables us to promote excellence in research and education without division. 
+                                        </p><p>
+
+                                                                    The DPA strives to afford equal access to education, employment, recognition, societal memberships, social gatherings, and study groups, shared spaces, and other departmental privileges. The CDEIC desires that diversity be reflected by the composition of the DPA community at all levels (including the undergraduate and graduate students; post-docs; faculty; and research, education, and administrative staff). We acknowledge that the achievement of this goal is at least twofold: we strive to break down practical barriers to the success of underrepresented groups and erode negative stereotypes that might contribute to unwelcomeness. 
+
+                                        </p><p>
+                                                                    We pledge to support our community members as they seek to learn how to uphold these values and recognize and oppose all forms of bigotry and discrimination.
+
+                                                                    </p>
+                                  <p></p>
+                                      </div>
+                                  </div>
+                                </div>
+                                
+                                
+                           
+                                
 							</header>
 							<section class="tiles">
 								<article class="style1">
